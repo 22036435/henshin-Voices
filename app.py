@@ -11,21 +11,6 @@ import time
 import subprocess
 import csv
 import pandas as pd
-#import speech_recognition as sr
-#import pyttsx3
-
-'''
-gpus = tf.config.list_physical_devices('GPU')
-if gpus:
-    try:
-        for gpu in gpus:
-            tf.config.experimental.set_memory_growth(gpu, True)
-        print("GPUs available: ", gpus)
-    except RuntimeError as e:
-        print(e)
-else:
-    print("No GPU available.")
-'''
 
 app = Flask(__name__)
 
@@ -104,18 +89,6 @@ def stop_speaking():
         speech_process.wait()
         # Reset the speech process variable
         speech_process = None
-
-'''# Global pyttsx3 engine initialization
-tts_engine = pyttsx3.init()
-
-def speak(text):
-    global tts_engine
-    tts_engine.say(text)
-    tts_engine.runAndWait()
-
-
-def stop_speaking():
-    tts_engine.stop()'''
 
 openai.api_key = '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'
 
@@ -240,53 +213,6 @@ def gen_frames():
 
     cap.release()
 
-# Global variable to manage the background listening thread
-listening_thread = None
-'''
-def listening_task(stop_listening_command="stop listening", switch_command="switch"):
-
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Adjusting for ambient noise, please wait...")
-        r.adjust_for_ambient_noise(source)
-        print("Set up complete. Start speaking.")
-
-        try:
-            while True:
-                print("Listening...")
-                audio = r.listen(source, timeout=5)
-                try:
-                    text = r.recognize_google(audio)
-                    print(f"You said: {text}")
-                    if switch_command in text.lower():
-                        print("Switch command detected.")
-                        if sentence_generation_event.is_set():
-                            stop_speaking()
-                            stop_generating(sentence_generation_event)
-                        else:
-                            print('not on set')
-                            pass
-                    elif stop_listening_command in text.lower():
-                        print("Stop command detected. Exiting...")
-                        break
-                except sr.UnknownValueError:
-                    print("Google Web Speech could not understand audio")
-                except sr.RequestError as e:
-                    print(f"Could not request results from Google Web Speech service; {e}")
-        except KeyboardInterrupt:
-            print("Terminating transcription.")
-
-@app.route('/start_listening')
-def start_listening_route():
-    global listening_thread
-    if listening_thread is None or not listening_thread.is_alive():
-        # Adjust the commands as needed
-        listening_thread = Thread(target=listening_task, args=("stop listening", "switch"))
-        listening_thread.start()
-        return jsonify({"message": "Listening started"}), 200
-    else:
-        return jsonify({"message": "Listening is already running"}), 200
-'''
 @app.route('/start_generating')
 def start_generating_route():
     # Placeholder values for dataset and output_var
