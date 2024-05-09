@@ -16,7 +16,54 @@ Inclusive & Ethical Framework: Aimed at fostering positive political discourse, 
 
 ## Getting Started
 
-To experience "Henshin & Hate Speech," visit the web application at [Henshin & Hate Speech Web App](https://henshin-aslico-14859966a7ba.herokuapp.com).
+To experience "Henshin & Hate Speech," run the application locally:
+ ### 1. Utilise docker image to run the application:
+
+# Running the Docker Image
+
+Follow these steps to run the Docker image:
+
+1. **Install Docker**: If you haven't installed Docker, you can download it from [Docker's official website](https://www.docker.com/products/docker-desktop). Follow the instructions for your operating system.
+
+2. **Pull the Docker image**: You can pull the Docker image from Docker Hub using the following command in your terminal:
+
+    ```bash
+    docker pull <asliilhan>/henshin-voices
+    ```
+
+    Replace `<asliilhan>` with your Docker Hub username.
+
+3. **Run the Docker image**: After pulling the image, you can run it with the following command:
+
+    ```bash
+    docker run -p 5000:5000 <asliilhan>/henshin-voices
+    ```
+
+    This command will start the Docker container and map port 5000 inside the container to port 5000 on your host machine.
+
+4. **Access the application**: Once the Docker container is running, you can access the application by opening your web browser and navigating to `http://localhost:5000`.
+
+Please note that if port 5000 is already in use on your machine, you'll need to use a different port. You can do this by changing the `-p` option in the `docker run` command. For example, to use port 5001, you would use `-p 5001:5000`.
+
+### 2. Clone repository on your computer to run the application:
+
+1. **Clone Repository**: on bash/terminal,
+
+  ```bash
+  git clone https://github.com/22036435/henshin-Voices.git
+  ```
+
+2. **Install dependencies**: start the bash/terminal into the file,
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+3. **Run app on localhost**: paste the line on bash and run. After it's done copy the provided link, paste it on web page,
+
+  ```bash
+  python app.py
+  ```
 
 ### Prerequisites
 
