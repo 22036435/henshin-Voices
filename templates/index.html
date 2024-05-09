@@ -206,11 +206,6 @@
         .then(data => console.log("Started generating in background"))
         .catch(error => console.error('Error starting generation:', error));
 
-    fetch("/start_listening")
-        .then(response => response.json())
-        .then(data => console.log(data.message))
-        .catch(error => console.error('Error starting speech recognition:', error));
-
     // Make the subtitle visible when the experience starts
     var subtitle = document.getElementById('subtitle');
     if (subtitle) subtitle.style.display = "block";
