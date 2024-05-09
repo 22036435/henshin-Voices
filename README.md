@@ -43,7 +43,9 @@ Follow these steps to run the Docker image:
 
 Please note that if port 5000 is already in use on your machine, you'll need to use a different port. You can do this by changing the `-p` option in the `docker run` command. For example, to use port 5001, you would use `-p 5001:5000`.
 
-### 2. Clone repository on your computer to run the application:
+### 2. Clone repository to run the application locally:
+
+Follow these steps to run the app locally:
 
 1. **Clone Repository**: on bash/terminal,
 
