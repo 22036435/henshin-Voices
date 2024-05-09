@@ -52,6 +52,7 @@ Follow these steps to run the app locally:
   ```bash
   git clone https://github.com/22036435/henshin-Voices.git
   ```
+After the repository is cloned, navigate into the file.
 
 2. **Install dependencies**: start the bash/terminal into the file,
 
