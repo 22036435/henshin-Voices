@@ -11,6 +11,10 @@ import time
 import subprocess
 import csv
 import pandas as pd
+import openpyxl
+import warnings
+
+warnings.filterwarnings('ignore', category=UserWarning)
 
 app = Flask(__name__)
 
