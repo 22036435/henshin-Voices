@@ -47,14 +47,14 @@ Please note that if port 5000 is already in use on your machine, you'll need to 
 
 Follow these steps to run the app locally:
 
-1. **Clone Repository**: on bash/terminal,
+1. **Clone Repository**: copy the command line and paste onto bash.
 
   ```bash
   git clone https://github.com/22036435/henshin-Voices.git
   ```
 After the repository is cloned, navigate into the file.
 
-2. **Install dependencies**: start the bash/terminal into the file,
+2. **Install dependencies**:
 
   ```bash
   pip install -r requirements.txt
