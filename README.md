@@ -28,15 +28,13 @@ Follow these steps to run the Docker image:
 2. **Pull the Docker image**: You can pull the Docker image from Docker Hub using the following command in your terminal:
 
     ```bash
-    docker pull <asliilhan>/henshin-voices
+    docker pull asliilhan/henshin-voices
     ```
-
-    Replace `<asliilhan>` with your Docker Hub username.
 
 3. **Run the Docker image**: After pulling the image, you can run it with the following command:
 
     ```bash
-    docker run -p 5000:5000 <asliilhan>/henshin-voices
+    docker run -p 5000:5000 asliilhan/henshin-voices
     ```
 
     This command will start the Docker container and map port 5000 inside the container to port 5000 on your host machine.
@@ -59,7 +57,7 @@ Please note that if port 5000 is already in use on your machine, you'll need to 
   pip install -r requirements.txt
   ```
 
-3. **Run app on localhost**: paste the line on bash and run. After it's done copy the provided link, paste it on web page,
+3. **Run app on localhost**: paste the line on bash and run. Once the App is running, you can access the application by opening your web browser and navigating to provided link.
 
   ```bash
   python app.py
