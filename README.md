@@ -17,9 +17,9 @@ Inclusive & Ethical Framework: Aimed at fostering positive political discourse, 
 ## Getting Started
 
 To experience "Henshin & Hate Speech," run the application locally:
- ### 1. Utilise docker image to run the application:
 
-# Running the Docker Image
+
+### 1. Running the Docker Image
 
 Follow these steps to run the Docker image:
 
